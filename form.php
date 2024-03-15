@@ -12,7 +12,7 @@
         <h1 class="text-center">Insert some text and a "bad word" you want me to censor</h1>
         <div class="input-group">
             <span class="input-group-text">Text</span>
-            <textarea class="form-control" aria-label="Text" name="text"></textarea>
+            <textarea class="form-control" aria-label="Text" name="text" rows="10"></textarea>
         </div>
         <div class="input-group mb-3">
             <span class="input-group-text" id="basic-addon1">Bad Word</span>

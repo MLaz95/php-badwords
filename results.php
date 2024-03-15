@@ -2,6 +2,7 @@
 
 $text = $_GET['text'];
 $badWord = $_GET['bad-word'];
+$redactedText = str_ireplace($badWord, "***", $text);
 
 ?>
 
@@ -18,18 +19,28 @@ $badWord = $_GET['bad-word'];
 <body data-bs-theme="dark">
 
     <div class="container d-flex justify-content-between text-center mt-5">
-        <div class="col-5 border">
-            <h2>Here is the original text</h2>
-            <p>
-                <?php echo $text ?>
-            </p>
+        <div>
+            <div class="border">
+                <h2>Here is the original text</h2>
+                <p class="text-start px-3">
+                    <?php echo $text ?>
+                </p>
+            </div>
+            <div class="py-2">Your text is <?php echo strlen($text) ?> characters long</div>
         </div>
-        <div class="col-5 border">
-            <h2>Here is the censored text</h2>
-            <p>
-                <?php echo str_ireplace($badWord, "***", $text) ?>
-            </p>
+        <div>
+            <div class="border">
+                <h2>Here is the censored text</h2>
+                <p class="text-start px-3">
+                    <?php echo $redactedText ?>
+                </p>
+            </div>
+            <div class="py-2">The censored text is <?php echo strlen($redactedText) ?> characters long</div>
         </div>
+    </div>
+
+    <div class="text-center py-3">
+        <a href="form.php">Back to Form</a>
     </div>
 
 
