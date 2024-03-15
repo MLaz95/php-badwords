@@ -40,7 +40,7 @@ $redactedText = str_ireplace($badWord, "***", $text);
     </div>
 
     <div class="text-center py-3">
-        <a href="form.php">Back to Form</a>
+        <a href="index.php">Back to Form</a>
     </div>
 
 
